@@ -1,0 +1,136 @@
+.sectionId {
+    padding: 80px 0;
+    @media (max-width: 900px) {
+        padding: 24px 0;
+    }
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+// .row {
+//     flex-direction: row;
+//     @media (max-width: 900px) {
+//         flex-direction: column;
+//     }
+// }
+.bg {
+    background: #f4f7ff;
+}
+.section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    &__left {
+        width: 50%;
+        p {
+            font-size: 24px;
+            color: #18191f;
+            line-height: 40px;
+        }
+        h3 {
+            color: #000000cc;
+            font-size: 24px;
+            padding: 24px 0;
+        }
+    }
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding-bottom: 30px;
+
+        span {
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+    }
+    &__cards {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-top: 30px;
+    }
+    &__card {
+        // min-width: 120px;
+        width: calc(33.3% - 10px);
+        background: #f4f7ff;
+        padding: 10px 20px 10px 10px;
+        border-radius: 8px;
+        h3 {
+            font-size: 18px;
+            padding-top: 15px;
+            text-wrap: nowrap;
+        }
+    }
+    .card-bg {
+        background: #dfe8ff;
+    }
+    &__img {
+        width: 50%;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+    &__img-media {
+        display: none;
+    }
+
+    @media (max-width: 900px) {
+        // flex-direction: column;
+        flex-direction: column-reverse;
+        &__left {
+            width: 100%;
+            p {
+                line-height: 24px;
+                font-size: 16px;
+            }
+        }
+        &__img {
+            // width: 100%;
+            display: none;
+        }
+        &__img-media {
+            display: block;
+            width: 100%;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        &__cards {
+            gap: 9px;
+        }
+        &__card {
+            width: calc(33.3% - 6px);
+            padding: 8px;
+            h3 {
+                font-size: 14px;
+            }
+        }
+    }
+    @media (max-width: 450px) {
+        &__img-media {
+            height: 300px;
+            width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 420px) {
+        &__cards {
+            gap: 8px;
+        }
+        &__card {
+            width: calc(50% - 4px);
+        }
+    }
+}
